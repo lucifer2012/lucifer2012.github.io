@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.9.0/d3-legend.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+<h1>England Premier League</h1>
+<p class="info">contributors: CHEN YANG E-mail: chen.yang@utah.edu UID: u0738066</p>
+<p class="info">contributors: HAO SHA E-mail: u1078499 u1078499@utah.edu</p>
+<select id = "season" onchange="teamchart.update(value)">
+    <option value="11-12">11-12</option>
+    <option value="12-13">12-13</option>
+    <option value="13-14">13-14</option>
+    <option value="14-15">14-15</option>
+    <option selected value="15-16">15-16</option>
+</select>
+<div id="team-chart" class="view">
+</div>
+
+<div id = "month-chart" class = "view">
+    <!--<svg width = "450" height= "200" />-->
+</div>
+
+<div id = "property-chart" class = "view">
+</div>
+
+<div id = "selected-chart" class = "view">
+</div>
+
+<div id = "selectButton" class="view">
+    <label>Relationship between final ranking and </label>
+    <select id="dataset" onchange="globalchart.updatebybutton(document.getElementById('season').value,value)">
+        <option selected value="attack">Attack</option>
+        <option value="defense">Defense</option>
+        <option value="Chances-make">Chances Make</option>
+        <option value="Chances-take">Chances Take</option>
+    </select>
+</div>
+<div id = "global-chart" class = "view">
+</div>
+
+<div id = "votes-percentage" class = "view">
+</div>
+
+<div id = "tileChart" class = "view">
+    <div id="legend" class = "view"></div>
+    <div id = "tiles" class = "view"></div>
+</div>
+
+<script type="application/javascript" src="main_project.js"></script>
+<script type="application/javascript" src="TeamChart.js"></script>
+<script type="application/javascript" src="PropertyChart.js"></script>
+<script type="application/javascript" src="public/js/monthChart.js"></script>
+<script type="application/javascript" src="GlobalChart.js"></script>
+<script type="application/javascript" src="public/js/SelectedChart.js"></script>
+<!--<script type="application/javascript" src="public/js/shiftChart.js"></script>-->
+<!--<script type="application/javascript" src="public/js/main.js">-->
+
+<!--</script>-->
+</body>
 </html>
