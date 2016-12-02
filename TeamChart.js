@@ -114,7 +114,7 @@ TeamChart.prototype.update = function(value){
                 return j==i;
             })
                 .attr("x",function (d,j) {
-                    return svgWidth / 20 * i + 7.5;
+                    return svgWidth / 20 * i;
                 })
                 .attr("y", 20)
                 .classed("selectTeam", true);
