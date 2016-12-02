@@ -86,8 +86,8 @@ TeamChart.prototype.update = function(value){
                 return svgWidth / 20 * i + 25;
             })
             .attr("y", 30)
-            .attr("height", 40)
-            .attr("width", 40)
+            .attr("height", 50)
+            .attr("width", 50)
             .attr("xlink:href", function (d) {
                 return "figs/" + d + ".png";
             });
